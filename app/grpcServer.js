@@ -12,17 +12,22 @@ server.addService(grpcService.TeacherService.service, {
     }
 );
 
-server.bind('localhost:8899',grpc.ServerCredentials.createInsecure());
+server.bind('localhost:8899', grpc.ServerCredentials.createInsecure());
 server.start();
 
 function getRealNameByUsername(call, callback) {
-    console.log('username:'+ call.request.username);
-    callback(null,{realname:'张三'});
+    console.log('username:' + call.request.username);
+    callback(null, {realname: '张三'});
 }
-function getTeacherByAge() {
-    
-}function getTeacherWrapperByAges() {
 
-}function biTalk() {
+function getTeacherByAge() {
+
+}
+
+function getTeacherWrapperByAges() {
+
+}
+
+function biTalk() {
 
 }
